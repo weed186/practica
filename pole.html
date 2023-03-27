@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игровое поле</title>
+  <link rel="stylesheet" href="style2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100&display=swap" rel="stylesheet">
+<body>
+  <a href="index.html"><img src="logo.png" class="logo"></a>
+  <div id="list">
+    <ul>
+      <li><a href="pole.html" class="color">Игровое поле</li></a>
+      <li><a href="">Рейтинг</li></a>
+      <a href=""><li>Активные игроки</a></li>
+      <a href=""><li>История игр</a></li>
+      <a href=""><li>Список игроков</a></li>
+    </ul>
+    <a href="index.html"><img src="icon-button.png" class="icon"></a>
+  </div>
+
+  <div class="content">
+
+  <div class="currentPlayer">
+    <span>Сейчас ходит: <span id="curPlyr">X</span></span>
+  </div>
+  
+  <div id="area"></div>
+
+  <div class="start">
+    <table>
+      <th colspan="2">Статистика</th>
+      <tr>
+        <td>X</td>
+        <td><span id="sX">0</span></td>
+      </tr>
+      <tr>
+        <td>O</td>
+        <td><span id="sX">0</span></td>
+      </tr>
+      <tr>
+        <td>Ничья</td>
+        <td><span id="sD">0</span></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<div class="time"></div>
+<div id="menu">
+<input id="input" type="text">
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+<button id="reset">Reset</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
