@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100&family=Roboto:wght@100&display=swap');
 body {
   margin: 5px;
   padding: 5px;
@@ -83,6 +84,7 @@ body {
   position: absolute;
   top: 13.5%;
   left:43.5%;
+  background: linear-gradient(45deg,red, yellow,violet);
 }
 
 .stat {
@@ -95,7 +97,7 @@ body {
   border-collapse: collapse; /*отображение однострочной таблицы*/
 }
 
-.stat table, .stat th, .stat td {
+.stat table, .stat th, .stat td { /*задание свойства таблице*/
   border: 1px solid black;
   padding: 5px;
   text-align: center;
@@ -105,16 +107,19 @@ body {
   position: absolute;
   top: 45%;
   left:1.5%;
+  background: linear-gradient(45deg, red, green, blue);
 }
 
 #stop {
   position: absolute;
   top:45%;
   left:4%;
+  background: linear-gradient(45deg, red, green, blue);
 }
 
 #reset {
   position: absolute;
   top:45%;
   left:6.5%;
+  background: linear-gradient(45deg, red, green, blue);
 }
