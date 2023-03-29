@@ -249,3 +249,81 @@ body {
   top:152px;
   left:990px;
 }
+
+.zero3 {
+  display:flex;
+  flex-direction: column;
+  width:20px;
+  height:20px;
+  position:absolute;
+  top:245px;
+  left:0px;
+}
+
+.igrok3 {
+  display:flex;
+  flex-direction:column;
+  font-weight: normal;
+  position:absolute;
+  top:245px;
+  width:150px;
+  left:30px;
+}
+
+.protiv3 {
+  display:flex;
+  flex-direction:column;
+  position:absolute;
+  top:222px;
+  left:235px;
+}
+
+.cross3 {
+  display:flex;
+  flex-direction: column;
+  width:20px;
+  height:20px;
+  position:absolute;
+  top:240px;
+  left:325px;
+}
+
+.igrok33 {
+  display:flex;
+  flex-direction:column;
+  font-weight: normal;
+  width:150px;
+  position:absolute;
+  top:220px;
+  left:350px;
+}
+
+.kubok3 {
+  display:flex;
+  flex-direction:column;
+  position:absolute;
+  top:233px;
+  left:440px;
+}
+
+.date3 {
+  display:flex;
+  flex-direction:column;
+  font-weight: normal;
+  font-family: 'roboto';
+  width:150px;
+  position:absolute;
+  top:217px;
+  left:680px;
+}
+
+.time3 {
+  display:flex;
+  flex-direction: column;
+  font-weight:normal;
+  font-family: 'roboto';
+  width:150px;
+  position:absolute;
+  top:220px;
+  left:990px;
+}
