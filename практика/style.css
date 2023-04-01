@@ -47,7 +47,7 @@ body {
 
 .btn {
   display: inline-block;
-  color:#800080;
+  color:white;
   font-weight: 700;
   text-decoration: none;
   user-select: none;
@@ -55,4 +55,6 @@ body {
   border: 2px solid;
   border-radius: 10px;
   font-size: 12pt;
+  cursor: pointer;
+  background:#800080;
 }
