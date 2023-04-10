@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Игровое поле</title>
   <link rel="icon" href="critical-role.svg">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100&display=swap" rel="stylesheet">
 <body>
-  <a href="index.html"><img src="logo.png" class="logo"></a>
+  <a href="main.html"><img src="logo.png" class="logo"></a>
+  <!--Шапка-->
   <div class="list">
     <ul>
       <li><a href="pole.html">Игровое поле</li></a>
@@ -22,9 +23,23 @@
     </ul>
     <a href=""><img src="icon-button.png" class="icon"></a>
   </div>
-<a href="pole.html"><input type="button" value="Начать игру" class="btn"></a>
+  <!--Окно авторизации-->
+  <form action="pole.html" class="form" id="add-form">
+  <div class="modal">
+    <figure class="dog">
+  <img src="casual-life-3d-blue-scared-ghost 1.svg" class="ph">
+  <figcaption><h2>Войдите в игру</figcaption></h2>
+</figure>
+<div class="log">
+  <input type="text" placeholder="Логин" id="log">
+</div>
+<div class="pass">
+  <input type="password" placeholder="Пароль" id="pass" name="pass">
+</div>
+<a href="pole.html" class="link"><button type="submit">Войти</button></a>
+</div>
+</form>
 
-
-
+<script src="main.js"></script>
 </body>
 </html>
