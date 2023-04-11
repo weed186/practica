@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Подключение Bootstrap чтобы все выглядело красиво -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<title>Чат программа</title>
+	<!-- Свои стили -->
+	<style>
+		body {
+			background: #fcfcfc;
+		}
+	</style>
+</head>
+<body>
+	<!-- Основная часть страницы -->
+	<div class="container">
+		<div class="py-5 text-center">
+			<h2>Чат программа</h2>
+			<p class="lead">Укажите ваше имя и начинайте переписку</p>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<!-- Форма для получения сообщений и имени -->
+				<h3>Форма сообщений</h3>
+				<form id="messForm">
+					<label for="name">Имя</label>
+					<input type="text" name="name" id="name" placeholder="Введите имя" class="form-control">
+					<br>
+					<label for="message">Сообщение</label>
+					<textarea name="message" id="message" class="form-control" placeholder="Введите сообщение"></textarea>
+					<br>
+					<input type="submit" value="Отправить" class="btn btn-danger">
+				</form>
+			</div>
+			<div class="col-6">
+				<h3>Сообщения</h3>
+				<!-- Вывод всех сообщений будет здесь -->
+				<div id="all_mess"></div>
+			</div>
+		</div>
+	</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> <!---Подключение JQuery-->
+  <script src="/socket.io/socket.io.js"></script> <!--Подключение socket.io-->
+  <script>
+    $(function() {
+			var socket = io.connect();
+			var $form = $("#messForm");//переменная для формы сообщений
+			var $name = $("#name");//перемення для ввода имени
+			var $textarea = $("#message");//переменная для ввода сообщения
+			var $all_messages = $("#all_mess");//переменная для вывода сообщения
+
+			$form.submit(function(e) {//отслеживание событие кнопки отправки
+				event.preventDefault();
+				socket.emit('sendMess', {mess: $textarea.val(), name: $name.val()});//функция которая позволяет вызвать определенное событие внутри socket
+//val - вывод значения поля в socket.io 
+				$textarea.val('');//очистка поля ввода сообщения
+			});
+
+				socket.on('addMess', function(data) {
+				$all_messages.append("<div><b>" + data.name + "</b>: " + data.mess + "</div>");//append - специальная функция которая позволяет встроить определенный блок внутрь другого блока 
+	});
+		});
+		
+
+
+  </script>
+  </body>
+  </html>

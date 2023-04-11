@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100&family=Roboto:wght@100&display=swap');
+body {
+  margin: 5px;
+  padding: 5px;
+}
+#list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 4px 12px;
+  gap: 10px;
+  width: 130px;
+  height: 32px;
+}
+
+#list ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3px;
+  margin: 3px;
+  gap: 15px;
+  position: absolute;
+  left:35%;
+  top:0%;
+  font-size: 14pt;
+}
+
+#list li {
+  list-style-type: none;
+}
+
+#list a {
+  color: black;
+  padding:5px;
+  text-decoration:none;
+}
+
+#list a:hover, #list a.color {
+  color: teal;
+  background-color: cyan;
+}
+
+.icon {
+  position: absolute;
+  left: 95%;
+  top:0%;
+}
+
+.content {
+  display: flex;
+  margin: 100px 50px 50px 50px;
+  font-family: sans-serif;
+}
+
+#area {
+  width: 156px;
+  border: 1px solid black;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: inline-block;
+  font-size:26px;
+  border: 1px solid black;
+  cursor: pointer;
+  vertical-align:middle;
+}
+
+.cell:hover {
+  background-color: white;
+}
+
+.currentPlayer {
+  width: 140px;
+  font-size: 18px;
+  display: flex;
+  align-items:center;
+  position: absolute;
+  top: 13.5%;
+  left:43.5%;
+  background: linear-gradient(45deg,red, yellow,violet);
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.stat table {
+  border-collapse: collapse; /*отображение однострочной таблицы*/
+}
+
+.stat table, .stat th, .stat td { /*задание свойства таблице*/
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+#start {
+  position: absolute;
+  top: 45%;
+  left:1.5%;
+  background: white;
+  border:none;
+}
+
+#stop {
+  position: absolute;
+  top:45%;
+  left:4%;
+  background: white;
+  border: none;
+}
+
+#reset {
+  position: absolute;
+  top:45%;
+  left:6.5%;
+  background: white;
+  border:none;
+}
