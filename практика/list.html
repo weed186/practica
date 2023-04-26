@@ -68,9 +68,7 @@
       doShowAll();
     }
     
-    
-    // dynamically draw the table
-    
+
     function doShowAll() {
       if (CheckBrowser()) {
         var key = "";
@@ -90,7 +88,7 @@
     
     function CheckBrowser() {
       if ('localStorage' in window && window['localStorage'] !== null) {
-        // we can use localStorage object to store data
+        
         return true;
       } else {
           return false;
