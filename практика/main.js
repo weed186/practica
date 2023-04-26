@@ -56,7 +56,7 @@ document.getElementById('add-form').addEventListener('submit', function(event) {
   event.preventDefault();//отмена перезагрузки страницы
   if(validate(this)===true){
     window.location.href='pole.html'
-    alert('Форма проверена')
+    alert('Вход разрешен')
   }//отправка формы
   
 })

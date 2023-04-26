@@ -23,17 +23,82 @@
     </ul>
     <a href="main.html"><img src="icon-button.png" class="icon"></a>
 
-   <div class="journal"><h1>Список игроков</h1>
-   <button class="addplayer">Добавить игрока</button>
-   <div class="about">
+   
+   <form name='player'>
+
+		<div id="PlayArea">
+			<table>
+				<tr>
+
+					<td><b>Имя:</b><input type=text name=name></td>
+					<td><b>Очки:</b><input type=text name=score></td>
+
+				</tr>
+
+				<tr>
+					<td>
+					    <input type=button value="Сохранить"   onclick="SaveItem()"> 
+					    <input type=button value="Удалить" onclick="RemoveItem()">
+					  </td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="items_table">
+			<h2>Список игроков</h2>
+			<table id=list></table>
+			
+		</div>
+	</form>
+
+
+   <script>
+   function SaveItem() {
+			
+      var name = document.forms.player.name.value;
+      var score = document.forms.player.score.value;
+      localStorage.setItem(name, score);
+      doShowAll();
       
+    }
 
-
-   </div>
-
+    function RemoveItem() {
+      var name = document.forms.player.name.value;
+      document.forms.player.score.value = localStorage.removeItem(name);
+      doShowAll();
+    }
     
-   </div>
+    
+    // dynamically draw the table
+    
+    function doShowAll() {
+      if (CheckBrowser()) {
+        var key = "";
+        var list = "<tr><th>Имя</th><th>Очки</th></tr>\n";
+        var i = 0;
+        for (i = 0; i <= localStorage.length - 1; i++) {
+          key = localStorage.key(i);
+          list += "<tr><td>" + key + "</td>\n<td>"
+              + localStorage.getItem(key) + "</td></tr>\n";
+        }
+        if (list == "<tr><th>Name</th><th>Value</th></tr>\n") {
+          list += "<tr><td><i>empty</i></td>\n<td><i>empty</i></td></tr>\n";
+        }
+        document.getElementById('list').innerHTML = list;
+      } 
+      }
+    
+    function CheckBrowser() {
+      if ('localStorage' in window && window['localStorage'] !== null) {
+        // we can use localStorage object to store data
+        return true;
+      } else {
+          return false;
+      }
+    }
 
-   <script src="list.js"></script>
+   </script>
   </body>
   </html>
+
+  
